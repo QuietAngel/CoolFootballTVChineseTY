@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-F:/WorkUnity/Football/Android
+D:/DATA/Desktop/趣味足球-TV-通用-ver2.0.apk
 SceneListBegin?
 Assets/Scenes/yaokong.unity
 Assets/Scenes/game.unity
@@ -142,7 +142,7 @@ fe42e0c845f590482b63dcd03247f895 Assembly-CSharp.dll:.GeneralAdvancedTechniques
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 3ec5911579dadd2a88eaeab98f74efcc Assembly-CSharp.dll:.VirtualScreen
-2584cc28827b04c73d902318eda22411 Assembly-CSharp.dll:.SelectPlayerMenu
+eb174e1e2d8bf2a9a7f125f3d1d26e1f Assembly-CSharp.dll:.SelectPlayerMenu
 67b4dbd826ae79b4a474ca48e7ce7c8d Assembly-CSharp.dll:.GeneralSequencer
 e9c145815ba71caa9311653e53552d30 Assembly-CSharp.dll:DragonBone.Slot
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft

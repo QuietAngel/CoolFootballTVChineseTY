@@ -75,7 +75,8 @@ public class GameOver : MonoBehaviour {
         GameController._instance.npc.transform.localPosition = new Vector3(GameController._instance.npc.transform.localPosition.x, GameController._instance.npc.transform.localPosition.y, 5); GameController._instance.ball.SetActive(true);
 
 
-        GameController._instance.hand.GetComponent<UISelect>().ShowGameToSelectLV();
+        if (GameController._instance.IsUseHand == true)
+            GameController._instance.hand.GetComponent<UISelect>().ShowGameToSelectLV();
     }
     int coinAddNum = 0;
     public void ShowShengli()

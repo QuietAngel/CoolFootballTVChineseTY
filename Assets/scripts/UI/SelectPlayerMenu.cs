@@ -27,6 +27,8 @@ public class SelectPlayerMenu : MonoBehaviour {
     public Button btn_18;
     public Button btn_19;
     public Button btn_20;
+    public Button buy;
+    public Button noBuy;
     private Button[] btnPlayerAll;
 
     public GameObject player1;
@@ -67,6 +69,7 @@ public class SelectPlayerMenu : MonoBehaviour {
     public Text liliangText;
     public GameObject tishi;
     private float tishiShowTime = 1f;
+    public GameObject panelBuy;
     private void OnEnable()
     {
         if (nowShowPlayer != null)
@@ -90,6 +93,8 @@ public class SelectPlayerMenu : MonoBehaviour {
     { 
         btn_Home.onClick.AddListener(HomeClick);
         btn_Play.onClick.AddListener(PlayClick);
+        buy.onClick.AddListener(ClickBuy);
+        noBuy.onClick.AddListener(ClickNoBuy);
         btn_1.onClick.AddListener(AClick);
         btn_2.onClick.AddListener(BClick);
         btn_3.onClick.AddListener(CClick);
@@ -180,7 +185,7 @@ public class SelectPlayerMenu : MonoBehaviour {
                 }
             }
         }
-    }
+    } 
 
     void HomeClick()
     {
@@ -196,17 +201,20 @@ public class SelectPlayerMenu : MonoBehaviour {
         if (GetPlayerData(GameController._instance.NowUsePlayerID) == 1)
         {//有这个人物 直接开始
             GameStart();
-            GameController._instance.hand.GetComponent<UISelect>().ShowBuy();
+            if (GameController._instance.IsUseHand == true)
+                GameController._instance.hand.GetComponent<UISelect>().ShowBuy();
         }
         else
-        {//没有这个人物
+        {//没有这个人物   出提示购买
             if (UIManager._instance.CoinNum >= 1000)
-            {//金币够买人物  减去金币 获得人物 开始游戏
-                UIManager._instance.CoinNum -= 1000;
-                 
-                SetPlayerData(GameController._instance.NowUsePlayerID);
-                GameStart();
-                GameController._instance.hand.GetComponent<UISelect>().ShowBuy();
+            {//金币够买人物 出购买提示
+                UIManager._instance.uiStep = UIManager.UIStep.selectPlayerBuy;
+                panelBuy.SetActive(true);
+                if (GameController._instance.IsUseHand == true)
+                    GameController._instance.hand.GetComponent<UISelect>().ShowInBuyMenu();
+
+
+
             }
             else
             {//金币不够买   播放广告
@@ -214,12 +222,14 @@ public class SelectPlayerMenu : MonoBehaviour {
                 {//有广告
 
 
-                    GameController._instance.hand.GetComponent<UISelect>().ShowBuy();
+                    if (GameController._instance.IsUseHand == true)
+                        GameController._instance.hand.GetComponent<UISelect>().ShowBuy();
                 }
                 else
                 {
                     StartCoroutine(ShowTishi());
-                    GameController._instance.hand.GetComponent<UISelect>().ShowInNoCoin();
+                    if (GameController._instance.IsUseHand == true)
+                        GameController._instance.hand.GetComponent<UISelect>().ShowInNoCoin();
                 }
             }
         }
@@ -311,6 +321,29 @@ public class SelectPlayerMenu : MonoBehaviour {
     void TClick()
     {
         ChangePlayer(19);
+    }
+
+    void ClickBuy()
+    {
+        panelBuy.SetActive(false);
+        UIManager._instance.CoinNum -= 1000;
+
+        SetPlayerData(GameController._instance.NowUsePlayerID);
+      //  GameStart();
+        if (GameController._instance.IsUseHand == true)
+            GameController._instance.hand.GetComponent<UISelect>().ShowInBuyMenuClose();
+
+        jiage.SetActive(false);
+
+        UIManager._instance.uiStep = UIManager.UIStep.selectPlayer;
+    }
+    void ClickNoBuy()
+    {
+        UIManager._instance.uiStep = UIManager.UIStep.selectPlayer;
+        panelBuy.SetActive(false);
+        if (GameController._instance.IsUseHand == true)
+            GameController._instance.hand.GetComponent<UISelect>().ShowInBuyMenuClose();
+
     }
 
     string[] playerData;

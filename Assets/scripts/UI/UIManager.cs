@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour {
     public static UIManager _instance;
     public enum UIStep
     {
-        start,close,selectPlayer,selectLevel,game,gameStop,gameOver
+        start,close,selectPlayer,selectPlayerBuy,selectLevel,game,gameStop,gameOver
     }
     public UIStep uiStep = UIStep.start;
 

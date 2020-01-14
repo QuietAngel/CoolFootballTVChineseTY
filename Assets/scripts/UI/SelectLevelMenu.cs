@@ -143,13 +143,15 @@ public class SelectLevelMenu : MonoBehaviour {
 
             //更换背景音乐
             UIManager._instance.audioManager.PlayBG(Random.Range(2, 4));
-            GameController._instance.hand.GetComponent<UISelect>().ShowInCanPlay();
+            if (GameController._instance.IsUseHand == true)
+                GameController._instance.hand.GetComponent<UISelect>().ShowInCanPlay();
 
         }
         else
         {//不可进入
             StartCoroutine(ShowTishi());
-            GameController._instance.hand.GetComponent<UISelect>().ShowInCantPlay(lv);
+            if (GameController._instance.IsUseHand == true)
+                GameController._instance.hand.GetComponent<UISelect>().ShowInCantPlay(lv);
         }
     }
     void ChangeShowLeftRight()

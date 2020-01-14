@@ -38,7 +38,8 @@ public class UISelect : MonoBehaviour
         selectLvMenu.levelBtnAll[27],selectLvMenu.levelBtnAll[28],selectLvMenu.levelBtnAll[29],           //57---59
         gameMenu.btn_Home,                                            //60 
         stopMenu.btn_ok, stopMenu.btn_no,                            // 61  62
-        gameOver.btnHome, gameOver.btnRes, gameOver.btnPlay};       // 63  64   65
+        gameOver.btnHome, gameOver.btnRes, gameOver.btnPlay,       // 63  64   65
+        selectPlayerMenu.buy,selectPlayerMenu.noBuy};
     }
 
     void Update()
@@ -195,6 +196,19 @@ public class UISelect : MonoBehaviour
                             allBtn[i].onClick.Invoke();
                             return;
                         }
+                        else if (UIManager._instance.uiStep == UIManager.UIStep.selectPlayerBuy)
+                        {
+                            //if (i == 66)
+                            //{//选人界面购买界面购买
+                            //    mtra.position = startMenu.btn_start.transform.position;
+                            //}
+                            //else if (i == 67)
+                            //{//选人购买界面取消
+                            //    mtra.position = gameMenu.btn_Home.transform.position;
+                            //} 
+                            allBtn[i].onClick.Invoke();
+                            return;
+                        }
 
 
                     }
@@ -219,6 +233,10 @@ public class UISelect : MonoBehaviour
                 case UIManager.UIStep.selectPlayer:
                     ClickBack(selectPlayerMenu.btn_Home);
                     mtra.position = startMenu.btn_start.transform.position;
+                    break;
+                case UIManager.UIStep.selectPlayerBuy:
+                    ClickBack(selectPlayerMenu.noBuy);
+                    mtra.position = selectPlayerMenu.btn_Play.transform.position;
                     break;
                 case UIManager.UIStep.selectLevel:
                     ClickBack(selectLvMenu.btn_Home);
@@ -258,6 +276,9 @@ public class UISelect : MonoBehaviour
                 case UIManager.UIStep.selectPlayer:
                     ClickSelectPlayerLeft();
                     break;
+                case UIManager.UIStep.selectPlayerBuy:
+                    ClickSelectPlayerBuyLeft();
+                    break;
                 case UIManager.UIStep.selectLevel:
                     ClickSelectLvLeft();
                     break;
@@ -285,6 +306,9 @@ public class UISelect : MonoBehaviour
                     break;
                 case UIManager.UIStep.selectPlayer:
                     ClickSelectPlayerRight();
+                    break;
+                case UIManager.UIStep.selectPlayerBuy:
+                    ClickSelectPlayerBuyLeft();
                     break;
                 case UIManager.UIStep.selectLevel:
                     ClickSelectLvRight();
@@ -314,6 +338,9 @@ public class UISelect : MonoBehaviour
                 case UIManager.UIStep.selectPlayer:
                     ClickSelectPlayerUp();
                     break;
+                case UIManager.UIStep.selectPlayerBuy:
+                    ClickSelectPlayerBuyLeft();
+                    break;
                 case UIManager.UIStep.selectLevel:
                     ClickSelectLvUp();
                     break;
@@ -342,6 +369,9 @@ public class UISelect : MonoBehaviour
                 case UIManager.UIStep.selectPlayer:
                     ClickSelectPlayerDown();
                     break;
+                case UIManager.UIStep.selectPlayerBuy:
+                    ClickSelectPlayerBuyLeft();
+                    break;
                 case UIManager.UIStep.selectLevel:
                     ClickSelectLvDown();
                     break;
@@ -368,9 +398,19 @@ public class UISelect : MonoBehaviour
         mtra.position = gameOver.btnRes.transform.position;
     }
     public void ShowBuy()
-    { 
-        mtra.position = selectLvMenu.levelBtnAll[selectLvMenu.GetLevelData].transform.position;
+    {
+         mtra.position = selectLvMenu.levelBtnAll[selectLvMenu.GetLevelData].transform.position; 
+
     }
+    public void ShowInBuyMenu()
+    {
+        mtra.position = selectPlayerMenu.buy.transform.position;
+    }
+    public void ShowInBuyMenuClose()
+    {
+        mtra.position = selectPlayerMenu.btn_Play.transform.position;
+    }
+
     public void ShowInNoCoin()
     { 
         mtra.position = selectPlayerMenu.btn_Play.transform.position;
@@ -1485,5 +1525,19 @@ public class UISelect : MonoBehaviour
             mtra.position = gameOver.btnHome.transform.position;
         }
     }
-    #endregion 
+    #endregion
+
+    #region
+    void ClickSelectPlayerBuyLeft()
+    {
+        if (mtra.position == selectPlayerMenu.buy.transform.position)
+        {
+            mtra.position = selectPlayerMenu.noBuy.transform.position;
+        }
+        else if (mtra.position == selectPlayerMenu.noBuy.transform.position)
+        {
+            mtra.position = selectPlayerMenu.buy.transform.position;
+        }
+    }
+    #endregion
 }

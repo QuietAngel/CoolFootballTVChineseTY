@@ -252,7 +252,11 @@ public class GameController : MonoBehaviour
                 //  Destroy(ballFather.GetChild(0).gameObject);
             }
         }
-        print(isStop);
+        //  print(isStop);
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            UIManager._instance.CoinNum += 1000;
+        }
     }
 
     public void ResetPos()

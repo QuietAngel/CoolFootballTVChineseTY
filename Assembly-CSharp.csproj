@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{85DCE1AE-5311-F515-101C-ED155B79DEDD}</ProjectGuid>
+    <ProjectGuid>{EA88F000-904F-BCAE-0129-017EC9763600}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -148,16 +148,16 @@
     <None Include="Assets\DragonBone\Shader\DragonBoneSimple.shader" />
     <None Include="Assets\LeanTween\License.txt" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

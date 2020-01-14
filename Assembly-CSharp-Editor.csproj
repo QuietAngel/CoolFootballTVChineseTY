@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{834FAAFA-6535-39EC-2535-9DE5C68D8D82}</ProjectGuid>
+    <ProjectGuid>{E561D44C-1F33-07F6-A808-44DD0AE8215E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -82,19 +82,19 @@
     <Compile Include="Assets\EasyTouch\Plugins\Editor\HTGUILayout.cs" />
     <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
     <Reference Include="Assembly-UnityScript">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseHuaWei/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/WorkUnity/Football/CoolFootballTVChineseTY/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -387,7 +387,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{85DCE1AE-5311-F515-101C-ED155B79DEDD}</Project>
+      <Project>{EA88F000-904F-BCAE-0129-017EC9763600}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>
