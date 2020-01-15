@@ -66,7 +66,7 @@ public class UISelect : MonoBehaviour
     void ClickOK(Button btn)
     {
         KeyCode MIOkKeyCode =GameController.DEBUG?KeyCode.Return:(KeyCode)10;//小米遥控器确认键
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(MIOkKeyCode))
+        if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(MIOkKeyCode))
         {
             btn.onClick.Invoke();          //即可自动产生点击动作并调用方法。
         }
@@ -84,7 +84,7 @@ public class UISelect : MonoBehaviour
         if (isHaveClick == false)
         {
             KeyCode MIOkKeyCode =GameController.DEBUG?KeyCode.Return:(KeyCode)10;//小米遥控器确认键
-            if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(MIOkKeyCode))
+            if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(MIOkKeyCode))
             {
                 // print("?????"  + selectLvMenu.levelBtnAll[selectLvMenu.GetLevelData].transform.localPosition +"                 "+mtra.localPosition);
                 isHaveClick = true;
@@ -218,7 +218,7 @@ public class UISelect : MonoBehaviour
     }
     void ClickReturn()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
             switch (UIManager._instance.uiStep)
             {
@@ -263,7 +263,7 @@ public class UISelect : MonoBehaviour
 
     void ClickFangxiang()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             switch (UIManager._instance.uiStep)
             {
@@ -294,7 +294,7 @@ public class UISelect : MonoBehaviour
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             switch (UIManager._instance.uiStep)
             {
@@ -325,7 +325,7 @@ public class UISelect : MonoBehaviour
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             switch (UIManager._instance.uiStep)
             {
@@ -356,7 +356,7 @@ public class UISelect : MonoBehaviour
                     break;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             switch (UIManager._instance.uiStep)
             {

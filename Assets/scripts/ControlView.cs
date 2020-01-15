@@ -18,7 +18,7 @@ public class ControlView : MonoBehaviour {
 	void Update ()
     {
         KeyCode MIOkKeyCode =GameController.DEBUG?KeyCode.Return:(KeyCode)10;//小米遥控器确认键
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetKeyDown(MIOkKeyCode))
+        if (Input.GetKeyUp(KeyCode.P) || Input.GetKeyUp(KeyCode.JoystickButton0) || Input.GetKeyUp(MIOkKeyCode))
         {
             JumpScene();
         }
